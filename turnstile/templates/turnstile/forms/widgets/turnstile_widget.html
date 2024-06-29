@@ -1,2 +1,2 @@
 <script src="{{ api_url }}" async defer></script>
-<div class="cf-turnstile" {% include "django/forms/widgets/attrs.html" %}></div>
+<div class="cf-turnstile" {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}></div>
